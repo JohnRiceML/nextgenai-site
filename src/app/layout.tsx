@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s — NEXTGEN AI L.L.C.",
   },
   description:
-    "NEXTGEN AI L.L.C. designs and ships AI-powered mobile and web products — Subreddit Signals, Narrative Nooks, Mochi, and Pimple Popper Game.",
+    "NEXTGEN AI L.L.C. is an independent studio designing AI-powered web apps and iOS games — Subreddit Signals, Narrative Nooks, Mochi, Tech Pathways, ClawPort, TicketToPR, Locala, InstaFunnel, and Pimple Popper Game.",
   robots: { index: true, follow: true },
   openGraph: {
     title: "NEXTGEN AI L.L.C.",
@@ -61,7 +61,7 @@ export default function RootLayout({
 function SiteNav() {
   return (
     <nav className="sticky top-0 z-20 backdrop-blur-md bg-[color:var(--background)]/75 border-b border-[color:var(--hairline)]/60">
-      <div className="mx-auto w-full max-w-5xl px-6 h-14 flex items-center justify-between">
+      <div className="mx-auto w-full max-w-6xl px-6 h-14 flex items-center justify-between">
         <Link
           href="/"
           className="flex items-center gap-2 text-sm font-medium tracking-tight"
@@ -73,12 +73,18 @@ function SiteNav() {
           <span>NEXTGEN AI</span>
           <span className="text-[color:var(--muted)] font-normal">L.L.C.</span>
         </Link>
-        <div className="flex items-center gap-7 text-sm text-[color:var(--muted)]">
+        <div className="flex items-center gap-6 sm:gap-7 text-sm text-[color:var(--muted)]">
           <Link
-            href="/#products"
+            href="/#web-apps"
             className="hover:text-[color:var(--foreground)] transition-colors"
           >
-            Products
+            Web
+          </Link>
+          <Link
+            href="/#ios-games"
+            className="hover:text-[color:var(--foreground)] transition-colors"
+          >
+            Games
           </Link>
           <Link
             href="/#about"
@@ -101,7 +107,7 @@ function SiteNav() {
 function SiteFooter() {
   return (
     <footer className="mt-32 border-t border-[color:var(--hairline)]">
-      <div className="mx-auto w-full max-w-5xl px-6 py-12 flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between text-sm text-[color:var(--muted)]">
+      <div className="mx-auto w-full max-w-6xl px-6 py-12 flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between text-sm text-[color:var(--muted)]">
         <div className="space-y-2">
           <div className="flex items-center gap-2 text-[color:var(--foreground)] font-medium tracking-tight">
             <span
