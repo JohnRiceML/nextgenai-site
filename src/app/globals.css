@@ -1,18 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8f6f1;
+  --background: #f7f4ee;
   --surface: #ffffff;
+  --surface-2: #fbf9f4;
   --foreground: #14110d;
   --muted: #6b6358;
-  --hairline: #e8e2d6;
+  --hairline: #e6dfd2;
   --accent: #b8400f;
   --accent-soft: #f4d9c4;
+  --shadow-card:
+    0 1px 1px rgba(20, 17, 13, 0.04),
+    0 8px 24px -12px rgba(20, 17, 13, 0.08),
+    0 24px 48px -28px rgba(20, 17, 13, 0.12);
+  --shadow-card-hover:
+    0 1px 2px rgba(20, 17, 13, 0.06),
+    0 12px 32px -10px rgba(20, 17, 13, 0.12),
+    0 32px 64px -28px rgba(20, 17, 13, 0.18);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-hairline: var(--hairline);
@@ -20,17 +30,27 @@
   --color-accent-soft: var(--accent-soft);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0e0c09;
     --surface: #16130e;
+    --surface-2: #110f0b;
     --foreground: #f5f1e8;
     --muted: #9c9388;
     --hairline: #2a241c;
     --accent: #e87a3a;
     --accent-soft: #3a1f10;
+    --shadow-card:
+      0 1px 1px rgba(0, 0, 0, 0.3),
+      0 8px 24px -12px rgba(0, 0, 0, 0.4),
+      0 24px 48px -28px rgba(0, 0, 0, 0.5);
+    --shadow-card-hover:
+      0 1px 2px rgba(0, 0, 0, 0.4),
+      0 12px 32px -10px rgba(0, 0, 0, 0.5),
+      0 32px 64px -28px rgba(0, 0, 0, 0.6);
   }
 }
 

@@ -155,10 +155,10 @@ export default function PrivacyPage() {
               Questions about this policy or a request about your information?
               Email{" "}
               <a
-                href="mailto:rice.john.nextgenai@gmail.com"
+                href="mailto:nextgenai.llc.us@gmail.com"
                 className="underline decoration-[color:var(--accent)] underline-offset-4"
               >
-                rice.john.nextgenai@gmail.com
+                nextgenai.llc.us@gmail.com
               </a>
               .
             </p>
