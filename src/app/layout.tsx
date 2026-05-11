@@ -66,19 +66,21 @@ export default function RootLayout({
 function SiteNav() {
   return (
     <nav className="sticky top-0 z-20 backdrop-blur-md bg-[color:var(--background)]/75 border-b border-[color:var(--hairline)]/60">
-      <div className="mx-auto w-full max-w-6xl px-6 h-14 flex items-center justify-between">
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
         <Link
           href="/"
-          className="flex items-center gap-2 text-sm font-medium tracking-tight"
+          className="flex items-center gap-2 text-sm font-medium tracking-tight min-w-0"
         >
           <span
             aria-hidden
-            className="inline-block h-2 w-2 rounded-full bg-[color:var(--accent)]"
+            className="inline-block h-2 w-2 rounded-full bg-[color:var(--accent)] shrink-0"
           />
-          <span>NEXTGEN AI</span>
-          <span className="text-[color:var(--muted)] font-normal">L.L.C.</span>
+          <span className="truncate">NEXTGEN AI</span>
+          <span className="hidden sm:inline text-[color:var(--muted)] font-normal">
+            L.L.C.
+          </span>
         </Link>
-        <div className="flex items-center gap-6 sm:gap-7 text-sm text-[color:var(--muted)]">
+        <div className="flex items-center gap-4 sm:gap-7 text-sm text-[color:var(--muted)]">
           <Link
             href="/#web-apps"
             className="hover:text-[color:var(--foreground)] transition-colors"
@@ -99,11 +101,14 @@ function SiteNav() {
           </Link>
           <Link
             href="/#contact"
-            className="hover:text-[color:var(--foreground)] transition-colors"
+            className="hidden xs:inline sm:inline hover:text-[color:var(--foreground)] transition-colors"
           >
             Contact
           </Link>
-          <span aria-hidden className="hidden sm:inline h-4 w-px bg-[color:var(--hairline)]" />
+          <span
+            aria-hidden
+            className="hidden sm:inline h-4 w-px bg-[color:var(--hairline)]"
+          />
           <ThemeToggle />
         </div>
       </div>
@@ -113,8 +118,8 @@ function SiteNav() {
 
 function SiteFooter() {
   return (
-    <footer className="mt-32 border-t border-[color:var(--hairline)]">
-      <div className="mx-auto w-full max-w-6xl px-6 py-12 flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between text-sm text-[color:var(--muted)]">
+    <footer className="mt-20 sm:mt-32 border-t border-[color:var(--hairline)]">
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 py-10 sm:py-12 flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between text-sm text-[color:var(--muted)]">
         <div className="space-y-2">
           <div className="flex items-center gap-2 text-[color:var(--foreground)] font-medium tracking-tight">
             <span
@@ -128,7 +133,7 @@ function SiteFooter() {
             reserved.
           </p>
         </div>
-        <nav className="flex flex-wrap items-center gap-x-7 gap-y-2">
+        <nav className="flex flex-wrap items-center gap-x-5 gap-y-2 sm:gap-x-7">
           <Link
             href="/privacy"
             className="hover:text-[color:var(--foreground)] transition-colors"

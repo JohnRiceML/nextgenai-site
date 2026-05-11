@@ -106,7 +106,7 @@ export default function Page() {
     <main className="relative flex-1 overflow-hidden">
       <Bloom />
 
-      <div className="mx-auto w-full max-w-6xl px-6">
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <Hero />
         <ProductMarquee />
         <WebApps />
@@ -133,8 +133,8 @@ function Bloom() {
 
 function Hero() {
   return (
-    <section className="pt-20 pb-16 sm:pt-32 sm:pb-24">
-      <div className="inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline)] bg-[color:var(--surface)]/60 px-3 py-1 text-xs font-medium tracking-tight text-[color:var(--muted)] backdrop-blur">
+    <section className="pt-14 pb-12 sm:pt-32 sm:pb-24">
+      <div className="inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline)] bg-[color:var(--surface)]/60 px-3 py-1 text-[11px] sm:text-xs font-medium tracking-tight text-[color:var(--muted)] backdrop-blur">
         <span
           aria-hidden
           className="inline-block h-1.5 w-1.5 rounded-full bg-[color:var(--accent)]"
@@ -142,7 +142,7 @@ function Hero() {
         Independent AI products studio
       </div>
 
-      <h1 className="mt-8 font-sans tracking-tight text-[44px] leading-[1.02] sm:text-[80px] sm:leading-[0.98] font-semibold text-balance max-w-[18ch]">
+      <h1 className="mt-6 sm:mt-8 font-sans tracking-tight font-semibold text-balance max-w-[18ch] leading-[1.04] sm:leading-[0.98] text-[clamp(2.25rem,11vw,5rem)]">
         We build{" "}
         <span className="font-display italic font-normal text-[color:var(--accent)]">
           practical
@@ -153,23 +153,23 @@ function Hero() {
         </span>
       </h1>
 
-      <p className="mt-8 max-w-2xl text-lg sm:text-xl leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-6 sm:mt-8 max-w-2xl text-base sm:text-xl leading-relaxed text-[color:var(--muted)]">
         NEXTGEN AI L.L.C. is an independent studio designing and shipping
         AI-powered web apps and iOS games. Small, focused products that earn a
         place on your home screen.
       </p>
 
-      <div className="mt-10 flex flex-wrap items-center gap-4 text-sm">
+      <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-3 sm:gap-4 text-sm">
         <Link
           href="#web-apps"
-          className="inline-flex items-center gap-2 rounded-full bg-[color:var(--foreground)] px-5 py-2.5 text-[color:var(--background)] font-medium hover:opacity-90 transition-opacity"
+          className="inline-flex h-11 items-center gap-2 rounded-full bg-[color:var(--foreground)] px-5 text-[color:var(--background)] font-medium hover:opacity-90 transition-opacity"
         >
           See our work
           <span aria-hidden>→</span>
         </Link>
         <a
           href={`mailto:${CONTACT_EMAIL}`}
-          className="inline-flex items-center gap-2 px-2 py-2.5 text-[color:var(--muted)] hover:text-[color:var(--foreground)] transition-colors"
+          className="inline-flex h-11 items-center gap-2 px-2 text-[color:var(--muted)] hover:text-[color:var(--foreground)] transition-colors"
         >
           Get in touch
         </a>
@@ -181,9 +181,9 @@ function Hero() {
 function ProductMarquee() {
   const items = [...allProducts, ...allProducts];
   return (
-    <div className="-mx-6 sm:mx-0 mb-20 sm:mb-28">
-      <div className="flex items-center gap-3 px-6 sm:px-0 mb-4 text-xs uppercase tracking-[0.18em] text-[color:var(--muted)]">
-        <span className="h-px w-8 bg-[color:var(--hairline)]" />
+    <div className="-mx-4 sm:-mx-6 mb-16 sm:mb-28">
+      <div className="flex items-center gap-3 px-4 sm:px-6 mb-4 text-[11px] sm:text-xs uppercase tracking-[0.18em] text-[color:var(--muted)]">
+        <span className="h-px w-6 sm:w-8 bg-[color:var(--hairline)]" />
         Shipping {allProducts.length} products
       </div>
       <div className="marquee-wrap relative overflow-hidden [-webkit-mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)] [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]">
@@ -198,7 +198,7 @@ function ProductMarquee() {
                 rel="noopener noreferrer"
                 aria-hidden={isDup || undefined}
                 tabIndex={isDup ? -1 : undefined}
-                className="flex shrink-0 items-center gap-2.5 px-6 text-sm font-medium text-[color:var(--muted)] hover:text-[color:var(--foreground)] transition-colors whitespace-nowrap"
+                className="flex shrink-0 items-center gap-2.5 px-4 sm:px-6 text-sm font-medium text-[color:var(--muted)] hover:text-[color:var(--foreground)] transition-colors whitespace-nowrap"
               >
                 <Logo product={p} size={36} radius="rounded-lg" />
                 {p.name}
@@ -215,7 +215,7 @@ function WebApps() {
   return (
     <section
       id="web-apps"
-      className="border-t border-[color:var(--hairline)] pt-14 sm:pt-20 scroll-mt-20"
+      className="border-t border-[color:var(--hairline)] pt-10 sm:pt-20 scroll-mt-20"
     >
       <SectionHeader
         kicker="Web Apps"
@@ -230,7 +230,7 @@ function WebApps() {
         meta={`${webApps.length} live`}
       />
 
-      <ul className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <ul className="mt-8 sm:mt-12 grid grid-cols-1 gap-4 sm:gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {webApps.map((p) => (
           <li key={p.name}>
             <ProductCard product={p} />
@@ -242,10 +242,11 @@ function WebApps() {
 }
 
 function IOSGames() {
+  const p = iosGames[0];
   return (
     <section
       id="ios-games"
-      className="mt-24 sm:mt-32 border-t border-[color:var(--hairline)] pt-14 sm:pt-20 scroll-mt-20"
+      className="mt-16 sm:mt-32 border-t border-[color:var(--hairline)] pt-10 sm:pt-20 scroll-mt-20"
     >
       <SectionHeader
         kicker="iOS Games"
@@ -260,13 +261,38 @@ function IOSGames() {
         meta={`${iosGames.length} on the App Store`}
       />
 
-      <ul className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2">
-        {iosGames.map((p) => (
-          <li key={p.name}>
-            <ProductCard product={p} feature />
-          </li>
-        ))}
-      </ul>
+      <a
+        href={p.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group mt-8 sm:mt-12 block rounded-2xl bg-[color:var(--surface)] p-5 sm:p-8 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] hover:-translate-y-0.5 transition-[transform,box-shadow] duration-200"
+      >
+        <div className="grid gap-5 sm:gap-8 sm:grid-cols-[140px_minmax(0,1fr)] sm:items-center">
+          <div className="shrink-0">
+            <Logo product={p} size={140} radius="rounded-2xl" />
+          </div>
+          <div>
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-[color:var(--accent-soft)] px-2.5 py-0.5 text-[11px] font-medium uppercase tracking-wider text-[color:var(--accent)]">
+              App Store
+            </span>
+            <h3 className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight">
+              {p.name}
+            </h3>
+            <p className="mt-2 text-[15px] sm:text-base leading-relaxed text-[color:var(--muted)] max-w-prose">
+              {p.tagline}
+            </p>
+            <div className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[color:var(--accent)]">
+              <span>Visit site</span>
+              <span
+                aria-hidden
+                className="transition-transform duration-200 group-hover:translate-x-0.5"
+              >
+                →
+              </span>
+            </div>
+          </div>
+        </div>
+      </a>
     </section>
   );
 }
@@ -281,12 +307,12 @@ function SectionHeader({
   meta?: string;
 }) {
   return (
-    <div className="flex items-end justify-between gap-6">
-      <div>
-        <h2 className="text-xs font-medium uppercase tracking-[0.18em] text-[color:var(--muted)]">
+    <div className="flex items-end justify-between gap-4 sm:gap-6">
+      <div className="min-w-0">
+        <h2 className="text-[11px] sm:text-xs font-medium uppercase tracking-[0.18em] text-[color:var(--muted)]">
           {kicker}
         </h2>
-        <p className="mt-3 max-w-xl text-2xl sm:text-3xl font-semibold tracking-tight text-balance">
+        <p className="mt-2 sm:mt-3 max-w-xl text-xl sm:text-3xl font-semibold tracking-tight text-balance">
           {title}
         </p>
       </div>
@@ -299,44 +325,30 @@ function SectionHeader({
   );
 }
 
-function ProductCard({
-  product,
-  feature = false,
-}: {
-  product: Product;
-  feature?: boolean;
-}) {
+function ProductCard({ product }: { product: Product }) {
   return (
     <a
       href={product.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative block h-full rounded-2xl bg-[color:var(--surface)] p-6 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] hover:-translate-y-0.5 transition-[transform,box-shadow] duration-200"
+      className="group relative block h-full rounded-2xl bg-[color:var(--surface)] p-5 sm:p-6 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] hover:-translate-y-0.5 transition-[transform,box-shadow] duration-200"
     >
       {product.openSource ? (
-        <span className="absolute top-4 right-4 inline-flex items-center gap-1 rounded-full bg-[color:var(--accent-soft)] px-2 py-0.5 text-[10.5px] font-medium uppercase tracking-wider text-[color:var(--accent)]">
+        <span className="absolute top-3 right-3 sm:top-4 sm:right-4 inline-flex items-center gap-1 rounded-full bg-[color:var(--accent-soft)] px-2 py-0.5 text-[10.5px] font-medium uppercase tracking-wider text-[color:var(--accent)]">
           Open source
         </span>
       ) : null}
 
-      <Logo
-        product={product}
-        size={feature ? 88 : 64}
-        radius={feature ? "rounded-2xl" : "rounded-xl"}
-      />
+      <Logo product={product} size={56} radius="rounded-xl" />
 
-      <h3
-        className={`mt-5 font-semibold tracking-tight ${
-          feature ? "text-2xl" : "text-lg"
-        }`}
-      >
+      <h3 className="mt-4 sm:mt-5 text-lg font-semibold tracking-tight">
         {product.name}
       </h3>
-      <p className="mt-2 text-[14.5px] leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-1.5 sm:mt-2 text-[14px] sm:text-[14.5px] leading-relaxed text-[color:var(--muted)]">
         {product.tagline}
       </p>
 
-      <div className="mt-5 flex items-center gap-1.5 text-sm font-medium text-[color:var(--accent)]">
+      <div className="mt-4 sm:mt-5 flex items-center gap-1.5 text-sm font-medium text-[color:var(--accent)]">
         <span>Visit site</span>
         <span
           aria-hidden
@@ -386,13 +398,13 @@ function About() {
   return (
     <section
       id="about"
-      className="mt-24 sm:mt-32 border-t border-[color:var(--hairline)] pt-14 sm:pt-20 scroll-mt-20"
+      className="mt-16 sm:mt-32 border-t border-[color:var(--hairline)] pt-10 sm:pt-20 scroll-mt-20"
     >
-      <div className="grid gap-12 sm:grid-cols-[200px_minmax(0,1fr)]">
-        <h2 className="text-xs font-medium uppercase tracking-[0.18em] text-[color:var(--muted)]">
+      <div className="grid gap-6 sm:gap-12 sm:grid-cols-[180px_minmax(0,1fr)]">
+        <h2 className="text-[11px] sm:text-xs font-medium uppercase tracking-[0.18em] text-[color:var(--muted)]">
           About
         </h2>
-        <div className="space-y-6 text-lg leading-relaxed text-[color:var(--foreground)]">
+        <div className="space-y-5 sm:space-y-6 text-base sm:text-lg leading-relaxed text-[color:var(--foreground)]">
           <p>
             NEXTGEN AI L.L.C. is a small, US-based studio. We design and ship
             AI-powered products end-to-end — handling design, engineering, and
@@ -420,26 +432,26 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="mt-24 sm:mt-32 border-t border-[color:var(--hairline)] pt-14 sm:pt-20 scroll-mt-20"
+      className="mt-16 sm:mt-32 border-t border-[color:var(--hairline)] pt-10 sm:pt-20 scroll-mt-20"
     >
-      <div className="grid gap-12 sm:grid-cols-[200px_minmax(0,1fr)]">
-        <h2 className="text-xs font-medium uppercase tracking-[0.18em] text-[color:var(--muted)]">
+      <div className="grid gap-6 sm:gap-12 sm:grid-cols-[180px_minmax(0,1fr)]">
+        <h2 className="text-[11px] sm:text-xs font-medium uppercase tracking-[0.18em] text-[color:var(--muted)]">
           Contact
         </h2>
         <div>
-          <p className="max-w-xl text-2xl sm:text-3xl font-semibold tracking-tight text-balance">
+          <p className="max-w-xl text-xl sm:text-3xl font-semibold tracking-tight text-balance">
             Questions about our apps, partnerships, or press?
           </p>
-          <p className="mt-4 max-w-xl text-lg text-[color:var(--muted)]">
+          <p className="mt-3 sm:mt-4 max-w-xl text-base sm:text-lg text-[color:var(--muted)]">
             We&apos;re a small team and we read everything that comes in.
           </p>
           <a
             href={`mailto:${CONTACT_EMAIL}`}
-            className="mt-8 inline-flex items-baseline text-2xl sm:text-3xl font-medium tracking-tight text-[color:var(--foreground)] underline decoration-[color:var(--accent)] decoration-2 underline-offset-[6px] hover:decoration-[3px] transition-all break-all"
+            className="mt-6 sm:mt-8 inline-flex items-baseline text-base sm:text-3xl font-medium tracking-tight text-[color:var(--foreground)] underline decoration-[color:var(--accent)] decoration-2 underline-offset-[6px] hover:decoration-[3px] transition-all break-all"
           >
             {CONTACT_EMAIL}
           </a>
-          <p className="mt-10 text-sm text-[color:var(--muted)]">
+          <p className="mt-8 sm:mt-10 text-sm text-[color:var(--muted)]">
             By contacting us you agree to our{" "}
             <Link
               href="/privacy"

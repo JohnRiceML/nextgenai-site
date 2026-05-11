@@ -13,17 +13,17 @@ const EMAIL = "nextgenai.llc.us@gmail.com";
 export default function TermsPage() {
   return (
     <main className="flex-1">
-      <article className="mx-auto w-full max-w-3xl px-6 pt-16 pb-12 sm:pt-24">
+      <article className="mx-auto w-full max-w-3xl px-4 sm:px-6 pt-10 pb-10 sm:pt-24 sm:pb-12">
         <Breadcrumb current="Terms" />
 
-        <h1 className="mt-10 text-4xl sm:text-5xl font-semibold tracking-tight">
+        <h1 className="mt-8 sm:mt-10 text-3xl sm:text-5xl font-semibold tracking-tight">
           Terms of Service
         </h1>
-        <p className="mt-4 text-sm text-[color:var(--muted)]">
+        <p className="mt-3 sm:mt-4 text-sm text-[color:var(--muted)]">
           Effective {EFFECTIVE}
         </p>
 
-        <div className="mt-12 space-y-12 text-[17px] leading-[1.7]">
+        <div className="mt-8 sm:mt-12 space-y-10 sm:space-y-12 text-[15.5px] sm:text-[17px] leading-[1.7]">
           <Intro>
             <p>
               These Terms of Service (&ldquo;Terms&rdquo;) govern your access
