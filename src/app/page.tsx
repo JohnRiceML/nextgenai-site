@@ -45,7 +45,7 @@ const webApps: Product[] = [
     url: "https://tech-pathways-orcin.vercel.app",
     logo: "/products/techpathways.svg",
     logoTreatment: "cover",
-    bg: "#0f172a",
+    bg: "#ffffff",
   },
   {
     name: "ClawPort",
@@ -179,25 +179,33 @@ function Hero() {
 }
 
 function ProductMarquee() {
+  const items = [...allProducts, ...allProducts];
   return (
     <div className="-mx-6 sm:mx-0 mb-20 sm:mb-28">
       <div className="flex items-center gap-3 px-6 sm:px-0 mb-4 text-xs uppercase tracking-[0.18em] text-[color:var(--muted)]">
         <span className="h-px w-8 bg-[color:var(--hairline)]" />
         Shipping {allProducts.length} products
       </div>
-      <div className="flex items-center gap-8 sm:gap-12 overflow-x-auto px-6 sm:px-0 pb-2 [-webkit-mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] sm:[-webkit-mask-image:none]">
-        {allProducts.map((p) => (
-          <a
-            key={p.name}
-            href={p.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex shrink-0 items-center gap-2.5 text-sm font-medium text-[color:var(--muted)] hover:text-[color:var(--foreground)] transition-colors"
-          >
-            <Logo product={p} size={36} radius="rounded-lg" />
-            {p.name}
-          </a>
-        ))}
+      <div className="marquee-wrap relative overflow-hidden [-webkit-mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)] [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]">
+        <div className="marquee-track flex w-max py-1">
+          {items.map((p, i) => {
+            const isDup = i >= allProducts.length;
+            return (
+              <a
+                key={`${p.name}-${i}`}
+                href={p.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-hidden={isDup || undefined}
+                tabIndex={isDup ? -1 : undefined}
+                className="flex shrink-0 items-center gap-2.5 px-6 text-sm font-medium text-[color:var(--muted)] hover:text-[color:var(--foreground)] transition-colors whitespace-nowrap"
+              >
+                <Logo product={p} size={36} radius="rounded-lg" />
+                {p.name}
+              </a>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

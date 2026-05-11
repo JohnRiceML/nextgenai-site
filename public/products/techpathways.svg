@@ -1,12 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs>
-    <linearGradient id="tpBg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#1e293b"/>
-      <stop offset="1" stop-color="#0f172a"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="14" fill="url(#tpBg)"/>
-  <path d="M14 24 L24 14 L34 24 L24 34 Z" fill="#38bdf8" opacity="0.85"/>
-  <path d="M30 40 L40 30 L50 40 L40 50 Z" fill="#fbbf24" opacity="0.9"/>
-  <path d="M22 32 H42" stroke="#f1f5f9" stroke-width="2.2" stroke-linecap="round" opacity="0.6"/>
+  <rect width="64" height="64" fill="#ffffff"/>
+  <text x="16" y="32" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="700" fill="#16a34a" text-anchor="middle" dominant-baseline="central">2</text>
+  <path d="M27 25 L34 32 L27 39" fill="none" stroke="#16a34a" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="48" y="32" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="700" fill="#14110d" text-anchor="middle" dominant-baseline="central">4</text>
 </svg>
