@@ -33,25 +33,31 @@
   --font-display: var(--font-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0e0c09;
-    --surface: #16130e;
-    --surface-2: #110f0b;
-    --foreground: #f5f1e8;
-    --muted: #9c9388;
-    --hairline: #2a241c;
-    --accent: #e87a3a;
-    --accent-soft: #3a1f10;
-    --shadow-card:
-      0 1px 1px rgba(0, 0, 0, 0.3),
-      0 8px 24px -12px rgba(0, 0, 0, 0.4),
-      0 24px 48px -28px rgba(0, 0, 0, 0.5);
-    --shadow-card-hover:
-      0 1px 2px rgba(0, 0, 0, 0.4),
-      0 12px 32px -10px rgba(0, 0, 0, 0.5),
-      0 32px 64px -28px rgba(0, 0, 0, 0.6);
-  }
+[data-theme="dark"] {
+  --background: #0e0c09;
+  --surface: #16130e;
+  --surface-2: #110f0b;
+  --foreground: #f5f1e8;
+  --muted: #9c9388;
+  --hairline: #2a241c;
+  --accent: #e87a3a;
+  --accent-soft: #3a1f10;
+  --shadow-card:
+    0 1px 1px rgba(0, 0, 0, 0.3),
+    0 8px 24px -12px rgba(0, 0, 0, 0.4),
+    0 24px 48px -28px rgba(0, 0, 0, 0.5);
+  --shadow-card-hover:
+    0 1px 2px rgba(0, 0, 0, 0.4),
+    0 12px 32px -10px rgba(0, 0, 0, 0.5),
+    0 32px 64px -28px rgba(0, 0, 0, 0.6);
+}
+
+html {
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
 }
 
 html,

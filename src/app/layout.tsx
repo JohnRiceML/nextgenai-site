@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeToggle } from "@/components/theme-toggle";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -48,11 +50,14 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
-        <SiteNav />
-        {children}
-        <SiteFooter />
+        <ThemeProvider>
+          <SiteNav />
+          {children}
+          <SiteFooter />
+        </ThemeProvider>
       </body>
     </html>
   );
@@ -98,6 +103,8 @@ function SiteNav() {
           >
             Contact
           </Link>
+          <span aria-hidden className="hidden sm:inline h-4 w-px bg-[color:var(--hairline)]" />
+          <ThemeToggle />
         </div>
       </div>
     </nav>
