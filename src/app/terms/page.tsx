@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const EFFECTIVE = "May 11, 2026";
-const EMAIL = "nextgenai.llc.us@gmail.com";
+const EMAIL = "support@nexgenai.llc";
 
 export default function TermsPage() {
   return (
@@ -28,7 +28,7 @@ export default function TermsPage() {
             <p>
               These Terms of Service (&ldquo;Terms&rdquo;) govern your access
               to and use of the website at this domain and the products
-              operated by NEXTGEN AI L.L.C., a Delaware limited liability
+              operated by NEXTGEN AI L.L.C., a Minnesota limited liability
               company (&ldquo;NEXTGEN AI,&rdquo; &ldquo;we,&rdquo;
               &ldquo;us,&rdquo; or &ldquo;our&rdquo;). By using our Products,
               you agree to these Terms. If you don&apos;t agree, please
@@ -330,10 +330,10 @@ export default function TermsPage() {
 
           <Section title="15. Governing law and disputes">
             <p>
-              These Terms are governed by the laws of the State of Delaware,
+              These Terms are governed by the laws of the State of Minnesota,
               without regard to its conflict-of-laws rules. Except where
               prohibited, you and NEXTGEN AI agree to resolve disputes in the
-              state or federal courts located in Delaware, and we each
+              state or federal courts located in Minnesota, and we each
               consent to personal jurisdiction there. Nothing in these Terms
               limits either party&apos;s right to seek injunctive relief in
               any competent court. If you are a consumer in a jurisdiction

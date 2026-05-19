@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const CONTACT_EMAIL = "nextgenai.llc.us@gmail.com";
+const CONTACT_EMAIL = "support@nexgenai.llc";
 
 type Product = {
   name: string;

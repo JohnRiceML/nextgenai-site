@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const EFFECTIVE = "May 11, 2026";
-const EMAIL = "nextgenai.llc.us@gmail.com";
+const EMAIL = "support@nexgenai.llc";
 
 export default function PrivacyPage() {
   return (
@@ -27,7 +27,7 @@ export default function PrivacyPage() {
           <Intro>
             <p>
               NEXTGEN AI L.L.C. (&ldquo;NEXTGEN AI,&rdquo; &ldquo;we,&rdquo;
-              &ldquo;us,&rdquo; or &ldquo;our&rdquo;) is a Delaware limited
+              &ldquo;us,&rdquo; or &ldquo;our&rdquo;) is a Minnesota limited
               liability company that builds and operates a portfolio of
               AI-powered products. This Privacy Policy explains what
               information we collect across our website and the nine products

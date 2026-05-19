@@ -22,7 +22,7 @@ const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
 });
 
-const CONTACT_EMAIL = "nextgenai.llc.us@gmail.com";
+const CONTACT_EMAIL = "support@nexgenai.llc";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextgenai-site.vercel.app"),
